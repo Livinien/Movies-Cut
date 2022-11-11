@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Models\Movie;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +14,20 @@ use App\Models\Listing;
 |
 */
 
-// All Listings //
+// All Movies //
 
 Route::get('/', function () {
-    return view('listings', [
-        'heading' => 'Lastest Listings',
-        'listings' => Listing::all()
+    return view('movies', [
+        'heading' => 'Lastest Movies',
+        'movies' => Movie::all()
     ]);
 });
 
 
-// Single Listing //
+// Single Movie //
 
-Route::get('/listing/{id}', function($id) {
-    return view('listing', [
-        'listing' => Listing::find($id)
+Route::get('/movies/{id}', function($id) {
+    return view('movie', [
+        'movie' => Movie::find($id)
     ]);
 });
