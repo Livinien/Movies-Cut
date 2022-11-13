@@ -16,12 +16,10 @@ return new class extends Migration
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->year('year');
+            $table->string('year');
             $table->string('studio');
-            $table->string('movie');
-            $table->time('duration');
-            $table->string('story');
-            $table->string('email');
+            $table->string('duration');
+            $table->longText('story');
             $table->timestamps();
         });
     }

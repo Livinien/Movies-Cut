@@ -6,7 +6,7 @@
 
 @foreach($movies as $movie)
     <h2>
-        <a href="/movies/{{$movie['id']}}">{{$movie['title']}}
+        <a href="/movie/{{$movie['id']}}">{{$movie['title']}}
     </h2></a>
 
     <p>Year : {{$movie['year']}}</p>
@@ -14,8 +14,6 @@
     <p>Duration : {{$movie['duration']}}</p>
 
     <p>{{$movie['story']}}</p>
-
-
 
 
 @endforeach
