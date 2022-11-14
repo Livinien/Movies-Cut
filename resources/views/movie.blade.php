@@ -1,4 +1,7 @@
 
+@extends('layout')
+
+@section('content')
 
 <h2>
     {{$movie['title']}}
@@ -6,3 +9,5 @@
 <p>
     {{$movie['story']}}
 </p>
+
+@endsection

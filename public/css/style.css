@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* HEADER - BOUTONS SIGN UP ET LOGIN  */
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px 20px 0;
+    background-color: #000;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+.header i {
+    color: #fff;
+    padding-right: 10px;
+}
+
+
+
+
+/* BANNIÈRE DU LOGO MOVIE */
+
+.title-movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.title-movie img {
+    width: 100%;
+}
+
+.title-presentation h1 {
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+
+
+/* CARDS MOVIES */
+
+.all-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+    max-width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    margin: 50px 20px;
+}
+
+.movie-img img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    padding: 0px 20px 20px 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    margin-top: 70px;
+}
+

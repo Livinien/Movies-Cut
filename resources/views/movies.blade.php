@@ -1,19 +1,35 @@
+@extends('layout')
 
 
-<h1>{{$heading}}</h1>
+@section('content')
+@include('partials._hero')
 
 @unless(count($movies) == 0)
 
 @foreach($movies as $movie)
-    <h2>
-        <a href="/movie/{{$movie['id']}}">{{$movie['title']}}
-    </h2></a>
 
-    <p>Year : {{$movie['year']}}</p>
 
-    <p>Duration : {{$movie['duration']}}</p>
+<div class="movie-card">
+    <div class="movie-img">
+        <img src="{{asset('images/Avatar_2.jpg')}}" alt="Avatar 2">
+    </div>
 
-    <p>{{$movie['story']}}</p>
+    <div class="card-body">
+        <h2 class="movie-title">
+            <a href="show.html">{{$movie->title}}</a>
+        </h2>
+        <span class="features">
+            <a href="#">{{$movie->year}}</a>
+        </span>
+        <span class="features">
+            <a href="#">{{$movie->duration}}</a>
+        </span>
+        <span class="features">
+            <a href="#">{{$movie->studio}}</a>
+        </span>
+        <p class="movie-intro">{{$movie->story}}</p>
+    </div>
+</div>
 
 
 @endforeach
@@ -21,3 +37,7 @@
 @else
 <p>No movies found</p>
 @endunless
+
+</div>
+
+@endsection
