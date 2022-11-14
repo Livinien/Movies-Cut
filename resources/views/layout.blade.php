@@ -19,7 +19,6 @@
     <div class="header">
         <ul>
             <li><a href="#"><i class="fa-sharp fa-solid fa-user-plus"></i>Sign Up</a></li>
-            
         </ul>
         <ul>
             <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i>Login</a></li>

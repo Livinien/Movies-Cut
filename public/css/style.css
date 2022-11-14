@@ -52,7 +52,6 @@ body {
 
 
 
-
 /* CARDS MOVIES */
 
 .all-cards {
@@ -81,6 +80,8 @@ body {
 /* FOOTER */
 
 footer {
+    position: sticky;
+    top: 1000px;
     display: flex;
     justify-content: center;
     background-color: #000;

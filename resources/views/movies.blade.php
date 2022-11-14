@@ -16,7 +16,7 @@
 
     <div class="card-body">
         <h2 class="movie-title">
-            <a href="show.html">{{$movie->title}}</a>
+            <a href="/movie/{{$movie->id}}">{{$movie->title}}</a>
         </h2>
         <span class="features">
             <a href="#">{{$movie->year}}</a>
