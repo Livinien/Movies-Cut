@@ -15,6 +15,7 @@
 </head>
 <body>
 
+    <!-- LINK IN HEADER  -->
 
     <div class="header">
         <ul>
@@ -24,13 +25,15 @@
             <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i>Login</a></li>
         </ul>
     </div>
+
+
     
+    <!-- CONTENT CARDS -->
 
-    <!-- VIEW OUTPUT -->
+    <main class="all-cards">
+        @yield('content')
+    </main>
 
-<main class="all-cards">
-    @yield('content')
-</main>
 
     <footer>
         <p>Copyright &copy; 2022, All Rights reserved</p>

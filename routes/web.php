@@ -14,7 +14,7 @@ use App\Models\Movie;
 |
 */
 
-// All Movies //
+// Home //
 
 Route::get('/', function () {
     return view('movies', [
