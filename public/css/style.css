@@ -11,12 +11,32 @@ body {
 
 .header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 30px 20px 0;
     background-color: #000;
 }
 
+.logo-movies-cut {
+    width: 80px;
+    margin-left: 10px;
+}
+
+
+.header ul, li {
+    display: flex;
+    list-style-type: none;
+    padding-left: 30px;
+}
+
 .header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+.header a {
     text-decoration: none;
     color: #fff;
     font-weight: 600;
@@ -109,13 +129,14 @@ form button:hover {
     display: inline-block;
     justify-content: center;
     align-items: center;
-    padding-left: 65px;
+    margin-left: 80px;
+    
 }
 
 .flex-cards-movies {
     display: flex;
     justify-content: center;
-    margin: 50px;
+    width: 90%;
 }
 
 .movie-card {

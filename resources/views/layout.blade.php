@@ -18,12 +18,16 @@
     <!-- LINK IN HEADER  -->
 
     <div class="header">
-        <ul>
-            <li><a href="#"><i class="fa-sharp fa-solid fa-user-plus"></i>Sign Up</a></li>
-        </ul>
-        <ul>
-            <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i>Login</a></li>
-        </ul>
+        <div class="logo-movies-cut">
+            <a href="/"><img src="{{asset('images/logo_movies_cut.png')}}" class="logo-movies-cut" alt="logo movies cut"></a>
+        </div>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-user-plus"></i>Sign Up</a></li>
+                <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i>Login</a></li>
+            </ul>
+        </nav>
     </div>
 
 
