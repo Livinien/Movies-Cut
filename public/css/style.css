@@ -73,7 +73,7 @@ body {
 
 
 
-/* SECTION "SEARCH" */
+/* SEARCH */
 
 .search {
     display: flex;
@@ -170,6 +170,114 @@ footer {
     padding: 15px;
     margin-top: 70px;
 }
+
+
+
+/* SECTION CARD MOVIE - SINGLE MOVIE */
+
+.back {
+    display: flex;
+    margin: 30px 0 0 30px;
+    
+}
+
+.back a {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    text-decoration: none;
+    color: #000;
+}
+
+.back i {
+    padding-right: 10px;
+}
+
+
+.container {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.image-movie {
+    display: flex;
+    justify-content: center;
+}
+
+.image-movie img {
+    width: 30%;
+}
+
+.title-single-movie {
+    display: flex;
+    justify-content: center;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.title-story {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.story {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+} 
+
+.imdb {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    text-decoration: none;
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.trailer {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.imdb i {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.trailer i {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.imdb:hover {
+    background-color: rgb(253, 63, 63);
+}
+
+.trailer:hover {
+    background-color: rgb(75, 75, 75);
+}
+
 
 
 
