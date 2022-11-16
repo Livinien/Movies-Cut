@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Movie;
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +15,11 @@ use App\Models\Movie;
 |
 */
 
-// Home //
+// ALL MOVIES //
 
-Route::get('/', function () {
-    return view('movies', [
-        'heading' => 'Lastest Movies',
-        'movies' => Movie::all()
-    ]);
-});
+Route::get('/', [MovieController::class, 'index']);
 
 
-// Single Movie //
+// SINGLE MOVIE //
 
-Route::get('/movie/{id}', function($id) {
-    return view('movie', [
-        'movie' => Movie::find($id)
-    ]);
-});
+Route::get('/movie/{movie}', [MovieController::class, 'show']);
