@@ -34,4 +34,3 @@ Route::get('/movie/{movie}', [MovieController::class, 'show']);
 // edit - Show form to edit movies
 // update - Update movie
 // delete - Delete movie
-
