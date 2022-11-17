@@ -23,3 +23,15 @@ Route::get('/', [MovieController::class, 'index']);
 // SINGLE MOVIE //
 
 Route::get('/movie/{movie}', [MovieController::class, 'show']);
+
+
+// Common Resources Routes :
+
+// index - Show all movies
+// show - Show single movie
+// create - Show form to create new movie
+// store - Store all movie
+// edit - Show form to edit movies
+// update - Update movie
+// delete - Delete movie
+
