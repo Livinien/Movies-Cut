@@ -1,18 +1,21 @@
-@extends('layout')
 
-@section('content')
-@include('partials.hero')
-@include('partials.search')
+<x-layout>
 
-@unless(count($movies) == 0)
+    @section('content')
+    @include('partials.hero')
+    @include('partials.search')
 
-@foreach($movies as $movie)
-<x-movie-card :movie="$movie" />
-@endforeach
+    @unless(count($movies) == 0)
 
-@else
-<p>No movies found</p>
-@endunless
+    @foreach($movies as $movie)
+    <x-movie-card :movie="$movie" />
+    @endforeach
+
+    @else
+    <p>No movies found</p>
+    @endunless
 
 
-@endsection
+    @endsection
+
+</x-layout>
