@@ -10,7 +10,7 @@ class MovieController extends Controller
 
     // SHOW ALL MOVIES //
     public function index() {
-        return view('movies', [
+        return view('movies.index', [
             'movies' => Movie::all()
         ]);
     }
@@ -18,7 +18,7 @@ class MovieController extends Controller
     
     // SHOW SINGLE MOVIE //
     public function show(Movie $movie) {
-        return view('movies', [
+        return view('movies.show', [
             'movie' => $movie
         ]);
     }
