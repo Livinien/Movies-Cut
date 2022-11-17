@@ -11,7 +11,8 @@ class MovieController extends Controller
     // SHOW ALL MOVIES //
     public function index() {
         return view('movies.index', [
-            'movies' => Movie::all()
+            'movies' => Movie::latest()->filter
+            (request(['search']))->get()
         ]);
     }
 
