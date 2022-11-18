@@ -16,13 +16,21 @@ use App\Http\Controllers\MovieController;
 */
 
 // ALL MOVIES //
-
 Route::get('/', [MovieController::class, 'index']);
 
 
-// SINGLE MOVIE //
+// SHOW CREATE FORM //
+Route::get('/movie/create', [MovieController::class, 'create']);
 
+
+// STORE MOVIE DATA //
+Route::post('/movies', [MovieController::class, 'store']);
+
+
+// SINGLE MOVIE //
 Route::get('/movie/{movie}', [MovieController::class, 'show']);
+
+
 
 
 // Common Resources Routes :

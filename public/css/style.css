@@ -281,6 +281,135 @@ span {
 
 
 
+/* SECTION ADD MOVIE */
 
+.wrapper {
+    max-width: 500px;
+    width: 100%;
+    height: 750px;
+    background-color: rgb(212, 212, 212);
+    margin: 100px auto;
+    padding: 40px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+}
+
+.wrapper 
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(212, 212, 212);
+    margin: 310px 0 0 -10px;
+}
+
+.wrapper 
+.form
+.input-field {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper 
+.form 
+.input-field label {
+    width: 40px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.wrapper .form .input-field .input,
+.wrapper .form .input-field .textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5db9d;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.wrapper 
+.form 
+.input-field 
+.textarea {
+    resize: none;
+    height: 125px;
+}
+
+.wrapper .form .input-field .input:focus, 
+.wrapper .form .input-field .textarea:focus {
+    border: 2px solid #000;
+}
+
+.wrapper 
+.form 
+.input-field
+.poster-movie {
+    width: 226px;
+    margin: 5px;
+}
+
+.wrapper 
+.form 
+.input-field 
+.button-submit {
+    width: 100%;
+    padding: 15px 5px;
+    font-size: 15px;
+    margin: 40px 10px 0px 10px;
+    border: 0;
+    background: tomato;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.wrapper 
+.form 
+.input-field 
+.button-submit:hover {
+    background-color: rgb(255, 113, 88);
+}
+
+.wrapper 
+.form 
+.input-field:last-child {
+    margin-bottom: 0;
+}
+
+.wrapper 
+.form 
+.input-field {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.wrapper 
+.form 
+.input-field {
+    margin-bottom: 20px;
+}
+
+
+
+@media(max-width: 660px) {
+
+    .wrapper {
+        width: 60%;
+    }
+}
 
 

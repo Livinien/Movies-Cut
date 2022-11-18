@@ -23,4 +23,24 @@ class MovieController extends Controller
             'movie' => $movie
         ]);
     }
+
+
+    // SHOW CREATE FORM //
+    public function create() {
+        return view('movies.create');
+    }
+
+
+    // STORE MOVIE DATA //
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'title' => 'required',
+            'year' => 'required',
+            'duration' => 'required',
+            'studio' => 'required',
+            'story' => 'required'
+        ]);
+
+        return redirect('/');
+    }
 }
