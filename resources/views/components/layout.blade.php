@@ -17,10 +17,15 @@
 
     <!-- LINK IN HEADER  -->
 
+    
+
     <div class="header">
+
         <div class="logo-movies-cut">
             <a href="/"><img src="{{asset('images/logo_movies_cut.png')}}" class="logo-movies-cut" alt="logo movies cut"></a>
         </div>
+
+        <x-flash-message />
 
         <nav class="navigation">
             <ul>
@@ -44,6 +49,8 @@
     <footer>
         <p>Copyright &copy; 2022, All Rights reserved</p>
     </footer>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
 
 </body>
 </html>

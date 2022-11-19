@@ -172,6 +172,24 @@ footer {
 }
 
 
+/* IF THE MOVIE HAS BEEN CREATED SUCCESSFULLY */
+.message {
+    color: #fff;
+    background-color: rgb(32, 161, 0);
+    width: 40%;
+    margin: -29px -208px 50px 10px;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    width: 15%;
+}
+
+.message p {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
+
 
 /* SECTION CARD MOVIE - SINGLE MOVIE */
 
@@ -286,15 +304,16 @@ span {
 .wrapper {
     max-width: 500px;
     width: 100%;
-    height: 750px;
+    height: 745px;
     background-color: rgb(212, 212, 212);
     margin: 100px auto;
-    padding: 40px;
+    padding: 70px;
+    border-radius: 5px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
 }
 
-.wrapper 
-.title {
+
+.wrapper .title {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
@@ -302,25 +321,28 @@ span {
     text-align: center;
 }
 
- .form {
+.form {
     display: flex;
     flex-direction: column;
     width: 100%;
     background-color: rgb(212, 212, 212);
-    margin: 310px 0 0 -10px;
+    margin: 330px 0 0 -10px;
 }
 
-.wrapper 
-.form
-.input-field {
-    margin-bottom: 15px;
+.wrapper .form .input-field {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
 }
 
-.wrapper 
-.form 
-.input-field label {
+.wrapper .form .input-field:last-child {
+    margin-bottom: 0;
+}
+
+
+.wrapper .form .input-field label {
     width: 40px;
     color: #757575;
     margin-right: 10px;
@@ -338,10 +360,7 @@ span {
     transition: all 0.3s ease;
 }
 
-.wrapper 
-.form 
-.input-field 
-.textarea {
+.wrapper .form .input-field .textarea {
     resize: none;
     height: 125px;
 }
@@ -351,22 +370,16 @@ span {
     border: 2px solid #000;
 }
 
-.wrapper 
-.form 
-.input-field
-.poster-movie {
+.wrapper .form .input-field .poster-movie {
     width: 226px;
     margin: 5px;
 }
 
-.wrapper 
-.form 
-.input-field 
-.button-submit {
+.wrapper .form .input-field .button-submit {
     width: 100%;
     padding: 15px 5px;
     font-size: 15px;
-    margin: 40px 10px 0px 10px;
+    margin: 30px 10px 0px 10px;
     border: 0;
     background: tomato;
     color: #fff;
@@ -377,32 +390,18 @@ span {
     transition: 0.3s ease-in-out;
 }
 
-.wrapper 
-.form 
-.input-field 
-.button-submit:hover {
+.wrapper .form .input-field .button-submit:hover {
     background-color: rgb(255, 113, 88);
 }
 
-.wrapper 
-.form 
-.input-field:last-child {
-    margin-bottom: 0;
-}
 
-.wrapper 
-.form 
-.input-field {
-    flex-direction: column;
-    align-items: flex-start;
+/* IF INPUTS ARE NOT COMPLETED */
+.error-message {
+    margin: 0;
+    padding-top: 5px;
+    font-size: 13px;
+    color: rgb(223, 0, 0);
 }
-
-.wrapper 
-.form 
-.input-field {
-    margin-bottom: 20px;
-}
-
 
 
 @media(max-width: 660px) {

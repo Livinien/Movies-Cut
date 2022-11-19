@@ -41,6 +41,8 @@ class MovieController extends Controller
             'story' => 'required'
         ]);
 
-        return redirect('/');
+        Movie::create($formFields);
+
+        return redirect('/')->with('message', 'Movie created Successfully !');
     }
 }

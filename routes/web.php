@@ -24,7 +24,7 @@ Route::get('/movie/create', [MovieController::class, 'create']);
 
 
 // STORE MOVIE DATA //
-Route::post('/movies', [MovieController::class, 'store']);
+Route::post('/movie', [MovieController::class, 'store']);
 
 
 // SINGLE MOVIE //
