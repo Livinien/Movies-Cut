@@ -12,7 +12,7 @@ class MovieController extends Controller
     public function index() {
         return view('movies.index', [
             'movies' => Movie::latest()->filter
-            (request(['search']))->get()
+            (request(['search']))->paginate(6)
         ]);
     }
 

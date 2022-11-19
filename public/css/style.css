@@ -32,6 +32,7 @@ body {
 .header ul li a {
     text-decoration: none;
     color: #fff;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -41,6 +42,7 @@ body {
     color: #fff;
     font-weight: 600;
 }
+
 
 
 .header i {
@@ -68,6 +70,7 @@ body {
 .title-presentation h1 {
     padding: 20px;
     font-size: 20px;
+    font-weight: 600;
 }
 
 
@@ -156,6 +159,19 @@ form button:hover {
     padding: 0px 20px 20px 20px;
 }
 
+.movie-title {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 20px auto;
+}
+
+.features {
+    padding: 5px;
+}
+
+.movie-intro {
+    margin: 19px 0 15px;
+}
 
 
 /* FOOTER */
@@ -167,8 +183,8 @@ footer {
     justify-content: center;
     background-color: #000;
     color: #fff;
-    padding: 15px;
-    margin-top: 70px;
+    padding: 30px;
+    margin-top: 60px;
 }
 
 
@@ -189,6 +205,15 @@ footer {
     margin: auto;
     text-align: center;
 }
+
+
+/* PAGINATION */
+
+.paginate {
+    display: flex;
+    justify-content: center;
+}
+
 
 
 /* SECTION CARD MOVIE - SINGLE MOVIE */
