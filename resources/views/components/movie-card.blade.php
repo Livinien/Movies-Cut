@@ -5,7 +5,7 @@
     <div class="flex-cards-movies">
         <div class="movie-card">
             <div class="movie-img">
-                <img src="{{asset('images/Avatar_2.jpg')}}" alt="Avatar 2">
+                <img src="{{$movie->poster ? asset('storage/' . $movie->poster) : asset('/images/Ready_Player_One.jpg')}}" alt="Posters movies">
             </div>
 
             <div class="card-body">

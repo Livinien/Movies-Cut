@@ -41,8 +41,40 @@ class MovieController extends Controller
             'story' => 'required'
         ]);
 
+        if($request->hasFile('poster')) {
+            $formFields['poster'] = $request->file('poster')->store('posters', 'public');
+        }
+
         Movie::create($formFields);
 
         return redirect('/')->with('message', 'Movie created Successfully !');
     }
+
+
+    // SHOW EDIT FORM //
+    public function edit(Movie $movie) {
+        return view('movies.edit', ['movie' => $movie]);
+    }
+
+
+    // UPDATE MOVIE DATA //
+    public function update(Request $request, Movie $movie) {
+        $formFields = $request->validate([
+            'title' => 'required',
+            'year' => 'required',
+            'duration' => 'required',
+            'studio' => 'required',
+            'story' => 'required'
+        ]);
+
+        if($request->hasFile('poster')) {
+            $formFields['poster'] = $request->file('poster')->store('posters', 'public');
+        }
+
+        $movie->update($formFields);
+
+        return back()->with('message', 'Movie updated Successfully !');
+    }
+
+
 }

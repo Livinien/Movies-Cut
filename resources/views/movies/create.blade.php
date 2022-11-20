@@ -4,7 +4,7 @@
     <div class="title">
         <h4>Create Movie</h4>
     </div>
-    <form method="POST" action="/movie" class="form">
+    <form method="POST" action="/movie" class="form" enctype="multipart/form-data">
         @csrf
         <div class="input-field">
             <label>Title</label>
@@ -51,11 +51,15 @@
             @enderror
         </div>
 
-        <!-- <div class="input-field">
+        <div class="input-field">
             <label class="poster-movie">Upload poster movie</label>
             <input type="file" name="poster">
            </button>
-        </div> -->
+
+            @error('poster')
+            <p class="error-message">{{$message}}</p>
+            @enderror
+        </div>
 
         <div class="input-field">
             <input type="submit" class="button-submit" value="Create Movie">

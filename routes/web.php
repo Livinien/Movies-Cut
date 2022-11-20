@@ -27,6 +27,14 @@ Route::get('/movie/create', [MovieController::class, 'create']);
 Route::post('/movie', [MovieController::class, 'store']);
 
 
+// SHOW EDIT FORM //
+Route::get('/movie/{movie}/edit',[MovieController::class, 'edit']);
+
+
+// UPDATE MOVIE //
+Route::put('/movie/{movie}', [MovieController::class, 'update']);
+
+
 // SINGLE MOVIE //
 Route::get('/movie/{movie}', [MovieController::class, 'show']);
 
