@@ -35,6 +35,10 @@ Route::get('/movie/{movie}/edit',[MovieController::class, 'edit']);
 Route::put('/movie/{movie}', [MovieController::class, 'update']);
 
 
+// DELETE MOVIE //
+Route::delete('/movie/{movie}', [MovieController::class, 'destroy']);
+
+
 // SINGLE MOVIE //
 Route::get('/movie/{movie}', [MovieController::class, 'show']);
 

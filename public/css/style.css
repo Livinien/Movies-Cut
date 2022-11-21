@@ -95,7 +95,6 @@ input {
     flex: 1;
     border: none;
     outline: none;
-    border-radius: 5px 0px 0px 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -104,7 +103,7 @@ input[type=text] {
     padding: 20px;
 }
 
-form button {
+.search .button-search {
     background: tomato;
     padding: 10px 50px;
     border: none;
@@ -119,7 +118,7 @@ form button {
     cursor: pointer;
 }
 
-form button:hover {
+.button-search:hover {
     background: rgb(255, 124, 100);
 }
 
@@ -321,26 +320,55 @@ span {
     background-color: rgb(75, 75, 75);
 }
 
-.slt {
+
+/* BUTTONS "BACK" "EDIT" "DELETE" */
+
+/* WATCH IN MOVIE.BLADE.PHP FILE */
+
+.flex-back-edit-delete {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .edit {
+    display: flex;
     margin-bottom: -25px;
-    padding-right: 50px;
+    padding-right: 11px;
 }
 
 .edit a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: #000;
+    color: rgb(46, 163, 0);
+    margin-right: 30px;
+    padding: 10px;
     font-size: 25px;
+    transition: 0.3s ease-in-out;
 }
 
-.edit a i {
-    padding: 10px;
+.edit i {
+    padding-right: 10px;
 }
+
+
+.button-delete {
+    font-size: 25px;
+    font-family: 'poppins', sans-serif;
+    cursor: pointer;
+}
+
+.edit .button-delete {
+    margin-top: 0px;
+    color: rgb(235, 0, 0);
+}
+
+.edit .button-delete i {
+    padding-right: 10px;
+}
+
+
 
 
 
@@ -465,4 +493,22 @@ span {
 .input-field img {
     width: 120px;
     padding-top: 10px;
+}
+
+.button-edit {
+    background-color: tomato;
+    color: #fff;
+    font-family: 'poppin', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 30px auto;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.button-edit:hover {
+    background-color: rgb(252, 115, 91);
 }

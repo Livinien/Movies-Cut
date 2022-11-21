@@ -17,6 +17,7 @@ class MovieController extends Controller
     }
 
     
+
     // SHOW SINGLE MOVIE //
     public function show(Movie $movie) {
         return view('movies.show', [
@@ -25,10 +26,12 @@ class MovieController extends Controller
     }
 
 
+
     // SHOW CREATE FORM //
     public function create() {
         return view('movies.create');
     }
+
 
 
     // STORE MOVIE DATA //
@@ -47,14 +50,17 @@ class MovieController extends Controller
 
         Movie::create($formFields);
 
-        return redirect('/')->with('message', 'Movie created Successfully !');
+        return redirect('/')->with('message', 'Movie created successfully !');
     }
+
 
 
     // SHOW EDIT FORM //
     public function edit(Movie $movie) {
         return view('movies.edit', ['movie' => $movie]);
     }
+
+
 
 
     // UPDATE MOVIE DATA //
@@ -76,5 +82,15 @@ class MovieController extends Controller
         return back()->with('message', 'Movie updated Successfully !');
     }
 
+
+    
+
+    // DELETE MOVIE  //
+
+    public function destroy(Movie $movie) {
+        $movie->delete();
+
+        return redirect('/')->with('message', 'Movie deleted successfully');
+    }
 
 }

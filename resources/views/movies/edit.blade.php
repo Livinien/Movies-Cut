@@ -65,7 +65,7 @@
             </div>
 
             <div class="input-field">
-                <input type="submit" class="button-submit" value="Create Movie">
+                <input type="submit" class="button-edit" value="Create Movie">
             </div>
 
         </form>
