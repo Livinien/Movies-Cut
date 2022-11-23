@@ -3,26 +3,26 @@
 
     @section('content')
 
-<div class="flex-back-edit-delete">
+    <div class="flex-back-edit-delete">
 
-    <div class="back">
-        <a href="/"><i class="fa-solid fa-arrow-left"></i>Back</a>
+        <div class="back">
+            <a href="/"><i class="fa-solid fa-arrow-left"></i>Back</a>
+        </div>
+
+        <x-movie>
+            <a href="/movie/{{$movie->id}}/edit">
+                <i class="fa-solid fa-pencil"></i>Edit
+            </a>
+
+            <form method="POST" action="/movie/{{$movie->id}}" class="delete">
+                @csrf
+                @method('DELETE')
+                <button class="button-delete"><i class="fa-solid fa-trash"></i>Delete</button>
+            </form>
+            
+            </x-movie>
+        </div>
     </div>
-
-    <x-movie>
-        <a href="/movie/{{$movie->id}}/edit">
-            <i class="fa-solid fa-pencil"></i>Edit
-        </a>
-
-        <form method="POST" action="/movie/{{$movie->id}}" class="delete">
-            @csrf
-            @method('DELETE')
-            <button class="button-delete"><i class="fa-solid fa-trash"></i>Delete</button>
-        </form>
-        
-        </x-movie>
-    </div>
-</div>
 
     <div class="container">
         <div class="image-movie">
