@@ -213,6 +213,14 @@ footer {
     text-align: center;
 }
 
+@media(max-width: 1411px) {
+
+    .message p {
+        padding-top: 10px;
+    }
+}
+
+
 
 /* PAGINATION */
 
@@ -529,7 +537,7 @@ span {
 .sign_up {
     max-width: 500px;
     width: 100%;
-    height: 710px;
+    height: 800px;
     background-color: rgb(236, 236, 236);
     margin: 100px auto;
     padding: 20px 70px 70px 70px;
@@ -548,7 +556,7 @@ span {
     flex-direction: column;
     width: 100%;
     background-color: rgb(236, 236, 236);
-    margin: 275px 0 0 -10px;
+    margin: 345px 0 0 -10px;
 }
 
 .sign_up .form-sign-up .input-field {
@@ -596,7 +604,7 @@ span {
 }
 
 .sign_up .form-sign-up .input-field .button-profile:hover {
-    background-color: rgb(255, 113, 88);
+    background: rgb(255, 124, 100);
 }
 
 .go-login {

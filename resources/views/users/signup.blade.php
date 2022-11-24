@@ -1,5 +1,9 @@
 <x-layout>
 
+    <div class="back">
+        <a href="/"><i class="fa-solid fa-arrow-left"></i>Back</a>
+    </div>
+
     <div class="sign_up">
         <div class="title">
             <h4>Sign Up</h4>
