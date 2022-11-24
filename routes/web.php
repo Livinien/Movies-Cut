@@ -51,10 +51,24 @@ Route::get('/movie/{movie}', [MovieController::class, 'show']);
 
 
 
+
 // SIGN UP AND LOGIN ON WEBSITE MOVIES CUT //
 
 // SHOW SIGN UP / CREATE FORM //
 Route::get('/signup', [UserController::class, 'create']);
 
+
 // CREATE NEW USER //
 Route::post('/users', [UserController::class, 'store']);
+
+
+// LOG USER OUT //
+Route::post('/logout', [UserController::class, 'logout']);
+
+
+// SHOW LOGIN FORM //
+Route::get('/login', [UserController::class, 'login']);
+
+
+// LOG IN USER //
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);

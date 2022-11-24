@@ -7,7 +7,7 @@
     <div class="sign_up">
         <div class="title">
             <h4>Sign Up</h4>
-            <p class="subtitle-profile">Create your Profile</p>
+            <p class="subtitle-profile">Create your account</p>
         </div>
 
         <form method="POST" action="/users" class="form-sign-up">
