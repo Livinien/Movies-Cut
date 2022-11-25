@@ -44,9 +44,10 @@
         </p>
 
 
-        <a href="https://www.imdb.com/title/tt1630029/?ref_=nv_sr_srsg_0" class="imdb" target=_blank><i class="fa-solid fa-film"></i>Watching Details Movie</a>
 
-        <a href="https://www.youtube.com/watch?v=ocCdUEcHS00" class="trailer" target=_blank><i class="fa-solid fa-video"></i>Watching Trailer</a>
+        <a href="{{$movie->details}}" class="imdb" target=_blank><i class="fa-solid fa-film"></i>Watching Details Movie</a>
+
+        <a href="{{$movie->trailer}}" class="trailer" target=_blank><i class="fa-solid fa-video"></i>Watching Trailer</a>
 
     </div>
     

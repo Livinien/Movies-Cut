@@ -22,6 +22,8 @@ class MovieFactory extends Factory
             'duration' => $this->faker->sentence(),
             'studio' => $this->faker->sentence(),
             'story' => $this->faker->paragraph(5),
+            'details' => $this->faker->url(),
+            'trailer' => $this->faker->url(),
         ];
     }
 }

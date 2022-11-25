@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('studio');
             $table->string('duration');
             $table->longText('story');
+            $table->string('details');
+            $table->string('trailer');
             $table->timestamps();
         });
     }

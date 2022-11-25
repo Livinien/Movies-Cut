@@ -19,7 +19,10 @@
                 @foreach($movies as $movie)
                 <tr>
                     <td class="movie">
-                        <a href="/movie/{{$movie->id}}">{{$movie->title}}</a> 
+                        <h4><a href="/movie/{{$movie->id}}"><img src="{{$movie->poster ? asset('storage/' . $movie->poster) : asset('/images/Ready_Player_One.jpg')}}" alt="Poster movies"></a></h4> 
+
+                        <a href="/movie/{{$movie->id}}">{{$movie->title}}</a>
+
                     </td>
                     <td class="table-edit">
                         <a class="edit-button-green" href="/movie/{{$movie->id}}/edit"><i class="fa-solid fa-pen-to-square"></i>Edit</a>

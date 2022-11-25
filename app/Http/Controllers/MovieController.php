@@ -41,7 +41,9 @@ class MovieController extends Controller
             'year' => 'required',
             'duration' => 'required',
             'studio' => 'required',
-            'story' => 'required'
+            'story' => 'required',
+            'details' => 'required',
+            'trailer' => 'required'
         ]);
 
         if($request->hasFile('poster')) {
@@ -79,7 +81,10 @@ class MovieController extends Controller
             'year' => 'required',
             'duration' => 'required',
             'studio' => 'required',
-            'story' => 'required'
+            'story' => 'required',
+            'details' => 'required',
+            'trailer' => 'required'
+            
         ]);
 
         if($request->hasFile('poster')) {

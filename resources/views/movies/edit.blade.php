@@ -1,11 +1,16 @@
+
+
+<!-- EDITOR MOVIE PAGE -->
+
+
 <x-layout>
 
-    <div class="wrapper">
+    <div class="edit-movie">
         <div class="title">
             <h4>Edit Movie</h4>
         </div>
 
-        <form method="POST" action="/movie/{{$movie->id}}" class="form" enctype="multipart/form-data">
+        <form method="POST" action="/movie/{{$movie->id}}" class="form-edit" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="input-field">
@@ -52,6 +57,24 @@
                 <p class="error-message">{{$message}}</p>
                 @enderror
             </div>
+            
+            <div class="input-field">
+                <label>Link Website Movie</label>
+                <input type="text" class="input" name="details" value="{{$movie->details}}">
+
+                @error('details')
+                <p class="error-message">{{$message}}</p>
+                @enderror
+            </div>
+
+            <div class="input-field">
+                <label>Link Trailer</label>
+                <input type="text" class="input" name="trailer" value="{{$movie->trailer}}">
+
+                @error('trailer')
+                <p class="error-message">{{$message}}</p>
+                @enderror
+            </div>
 
             <div class="input-field">
                 <label class="poster-movie">Upload poster movie</label>
@@ -65,7 +88,7 @@
             </div>
 
             <div class="input-field">
-                <input type="submit" class="button-edit" value="Create Movie">
+                <input type="submit" class="button-edit" value="Edit Movie">
             </div>
 
         </form>

@@ -1,3 +1,7 @@
+
+<!-- CREATE MOVIE PAGE -->
+
+
 <x-layout>
 
 <div class="back">
@@ -5,11 +9,11 @@
 </div>
 
 
-<div class="wrapper">
+<div class="create-movie">
     <div class="title">
         <h4>Create Movie</h4>
     </div>
-    <form method="POST" action="/movie" class="form" enctype="multipart/form-data">
+    <form method="POST" action="/movie" class="form-create" enctype="multipart/form-data">
         @csrf
         <div class="input-field">
             <label>Title</label>
@@ -52,6 +56,24 @@
             <textarea class="textarea" name="story">{{old('title')}}</textarea>
 
             @error('story')
+            <p class="error-message">{{$message}}</p>
+            @enderror
+        </div>
+
+        <div class="input-field">
+            <label>Link Website Movie</label>
+            <input type="text" class="input" name="details" value="{{old('details')}}">
+
+            @error('details')
+            <p class="error-message">{{$message}}</p>
+            @enderror
+        </div>
+
+        <div class="input-field">
+            <label>Link Trailer</label>
+            <input type="text" class="input" name="trailer" value="{{old('trailer')}}">
+
+            @error('trailer')
             <p class="error-message">{{$message}}</p>
             @enderror
         </div>

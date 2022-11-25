@@ -9,7 +9,7 @@ class Movie extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'year', 'duration', 'studio', 'story'];
+    protected $fillable = ['title', 'year', 'duration', 'studio', 'story', 'details', 'trailer'];
 
     // CALL INFORMATIONS IN "SEARCH" //
     public function scopeFilter($query, array $filters) {

@@ -422,10 +422,10 @@ span {
 
 /* SECTION ADD MOVIE */
 
-.wrapper {
+.create-movie {
     max-width: 500px;
     width: 100%;
-    height: 820px;
+    height: 810px;
     background-color: rgb(236, 236, 236);
     margin: 100px auto;
     padding: 20px 70px 70px 70px;
@@ -434,21 +434,21 @@ span {
 }
 
 
-.wrapper .title {
+.create-movie .title {
     font-size: 24px;
     text-transform: uppercase;
     text-align: center;
 }
 
-.form {
+.form-create {
     display: flex;
     flex-direction: column;
     width: 100%;
     background-color: rgb(236, 236, 236);
-    margin: 390px 0 0 -10px;
+    margin: 380px 0 0 -10px;
 }
 
-.wrapper .form .input-field {
+.create-movie .form-create .input-field {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -456,45 +456,47 @@ span {
     margin-bottom: 10px;
 }
 
-.wrapper .form .input-field:last-child {
+.create-movie .form-create.input-field:last-child {
     margin-bottom: 0;
 }
 
 
-.wrapper .form .input-field label {
-    width: 40px;
+.create-movie .form-create .input-field label {
     color: #757575;
     margin-right: 10px;
     font-size: 14px;
 }
 
-.wrapper .form .input-field .input,
-.wrapper .form .input-field .textarea {
+.create-movie .form-create .input-field .input,
+.create-movie .form-create .input-field .textarea, 
+.create-movie .form-create .input-field .website-informations-movie,
+.create-movie .form-create .input-field .website-trailer {
     width: 100%;
     outline: none;
     border: 1px solid #d5db9d;
     font-size: 15px;
     padding: 8px 10px;
     border-radius: 3px;
-    transition: all 0.3s ease;
 }
 
-.wrapper .form .input-field .textarea {
+.create-movie .form-create .input-field .textarea {
     resize: none;
     height: 125px;
 }
 
-.wrapper .form .input-field .input:focus, 
-.wrapper .form .input-field .textarea:focus {
+.create-movie .form-create .input-field .input:focus, 
+.create-movie .form-create .input-field .textarea:focus,
+.create-movie .form-create .input-field .website-informations-movie:focus,
+.create-movie .form-create .input-field .website-trailer:focus {
     border: 2px solid #000;
 }
 
-.wrapper .form .input-field .poster-movie {
+.create-movie .form-create .input-field .poster-movie {
     width: 226px;
     margin: 5px;
 }
 
-.wrapper .form .input-field .button-submit {
+.create-movie .form-create .input-field .button-submit {
     width: 100%;
     padding: 15px 5px;
     font-size: 15px;
@@ -509,7 +511,7 @@ span {
     transition: 0.3s ease-in-out;
 }
 
-.wrapper .form .input-field .button-submit:hover {
+.create-movie .form-create .input-field .button-submit:hover {
     background-color: rgb(255, 113, 88);
 }
 
@@ -523,9 +525,9 @@ span {
 }
 
 
-@media(max-width: 660px) {
+@media(max-width: 770px) {
 
-    .wrapper {
+    .create-movie {
         width: 60%;
     }
 }
@@ -534,6 +536,79 @@ span {
 
 
 /* SECTION EDIT MOVIE */
+
+.edit-movie {
+    max-width: 500px;
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(236, 236, 236);
+    margin: 100px auto;
+    padding: 20px 70px 70px 70px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+}
+
+.edit-movie .title {
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form-edit {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    margin: 477px 0 0 -10px;
+}
+
+.edit-movie .form-edit .input-field {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.edit-movie .form-edit .input-field:last-child {
+    margin-bottom: 0;
+}
+
+
+.edit-movie .form-edit .input-field label {
+    color: #757575;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.edit-movie .form-edit .input-field .input,
+.edit-movie .form-edit .input-field .textarea, 
+.edit-movie .form-edit .input-field .website-informations-movie,
+.edit-movie .form-edit .input-field .website-trailer {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5db9d;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+.edit-movie .form-edit .input-field .textarea {
+    resize: none;
+    height: 125px;
+}
+
+.edit-movie .form-edit .input-field .input:focus, 
+.edit-movie .form-edit .input-field .textarea:focus,
+.create-movie .form-edit .input-field .website-informations-movie:focus,
+.edit-movie .form-edit .input-field .website-trailer:focus {
+    border: 2px solid #000;
+}
+
+.edit-movie .form-edit .input-field .poster-movie {
+    width: 226px;
+    margin: 5px;
+}
 
 .input-field img {
     width: 120px;
@@ -558,6 +633,13 @@ span {
     background-color: rgb(252, 115, 91);
 }
 
+
+@media(max-width: 770px) {
+
+    .edit-movie {
+        width: 60%;
+    }
+}
 
 
 
@@ -848,6 +930,10 @@ span {
     padding-top: 20px;
 }
 
+.movie img {
+    width: 150px;
+}
+
 
 .table-edit .edit-button-green {
     border-style: none;
@@ -891,6 +977,21 @@ span {
 .delete-button-red:hover {
     background: #af0000;
 }
+
+
+
+
+@media(max-width: 800px) {
+
+    .table-edit .delete-button-green {
+        margin: 7px 0 0 20px;
+    }
+
+    .table-delete .delete-button-red {
+        margin: 7px 0 0 39px;
+    }
+}
+
 
 
 
