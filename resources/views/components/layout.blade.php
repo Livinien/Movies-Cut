@@ -42,10 +42,10 @@
                 <li>
                     <a href="/movie/manage"><i class="fa-solid fa-gear"></i>Manage Movies</a>
                 </li>
-                <li>
-                    <form class="logout" method="POST" action="/logout">
+                <li class="logout">
+                    <form method="POST" action="/logout">
                         @csrf
-                        <button type="submit">
+                        <button class="logout-button">
                             <i class="fa-solid fa-door-closed"></i>Logout
                         </button>
                     </form>

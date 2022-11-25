@@ -173,6 +173,14 @@ input[type=text] {
     margin: 20px auto;
 }
 
+.movie-title a {
+    text-decoration: none;
+}
+
+.movie-title a:hover {
+    color: #ff6262;
+}
+
 .features {
     padding: 5px;
 }
@@ -359,12 +367,21 @@ span {
 .edit a {
     display: flex;
     align-items: center;
+    border-style: none;
+    height: 37px;
+    padding: 6px 20px;
+    margin: 6px 20px 0 25px;
+    background-color: rgb(89, 184, 0);
     text-decoration: none;
-    color: rgb(46, 163, 0);
-    margin-right: 30px;
-    padding: 10px;
-    font-size: 25px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
     transition: 0.3s ease-in-out;
+}
+
+.edit a:hover {
+    background-color: rgb(71, 146, 0);
 }
 
 .edit i {
@@ -379,8 +396,19 @@ span {
 }
 
 .edit .button-delete {
-    margin-top: 0px;
-    color: rgb(235, 0, 0);
+    border-style: none;
+    padding: 6px 12px;
+    margin: 7px 0 0 0;
+    background-color: rgb(255, 2, 2);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.edit .button-delete:hover {
+    background: #af0000;
 }
 
 .edit .button-delete i {
@@ -645,18 +673,30 @@ span {
     text-transform: uppercase;
 }
 
-.logout {
-    display: flex;
-    font-weight: 600; 
-    margin-top: 20px;
+.logout form {
+    height: 10px;
+    border-style: none;
 }
 
-.logout button {
+.logout-button {
     display: flex;
-    justify-content: center;
     align-items: center;
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    margin: -2px 0 0 0;
+    background-color: rgb(255, 2, 2);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
+.logout-button:hover {
+    background: #ff6262;
+}
 
 
 
