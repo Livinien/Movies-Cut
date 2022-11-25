@@ -44,4 +44,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
+    // RELATIONSHIP WITH MOVIES //
+
+    public function movies() {
+        return $this->hasMany(Movie::class, 'user_id');
+    }
+
 }

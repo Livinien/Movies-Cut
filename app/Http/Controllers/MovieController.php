@@ -48,6 +48,8 @@ class MovieController extends Controller
             $formFields['poster'] = $request->file('poster')->store('posters', 'public');
         }
 
+        $formFields['user_id'] = auth()->id();
+
         Movie::create($formFields);
 
         return redirect('/')->with('message', 'Movie created successfully !');
@@ -64,7 +66,14 @@ class MovieController extends Controller
 
 
     // UPDATE MOVIE DATA //
+
     public function update(Request $request, Movie $movie) {
+
+        // Make sure logged in user in owner //
+        if($movie->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
+
         $formFields = $request->validate([
             'title' => 'required',
             'year' => 'required',
@@ -88,9 +97,23 @@ class MovieController extends Controller
     // DELETE MOVIE  //
 
     public function destroy(Movie $movie) {
+
+        // Make sure logged in user in owner //
+        if($movie->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
+
         $movie->delete();
 
         return redirect('/')->with('message', 'Movie deleted successfully');
+    }
+
+
+
+    // MANAGE MOVIES //
+
+    public function manage() {
+        return view('movies.manage', ['movies' => auth()->user()->movies()->get()]);
     }
 
 }

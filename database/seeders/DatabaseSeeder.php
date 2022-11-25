@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
  // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use App\Models\Movie;
 use Illuminate\Database\Seeder;
-use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
@@ -17,9 +17,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(5)->create();
+        //\App\Models\User::factory(5)->create();
 
-        Movie::factory(6)->create();
+        $user = User::factory()->create([
+            'firstname' => 'John',
+            'lastname' => 'Doe',
+            'email' => 'john@gmail.com',
+        ]);
+
+
+        Movie::factory(6)->create([
+            'user_id' => $user->id
+        ]);
 
         // Movie::create([
         //     'title' => 'Avatar : The Way of The Water',

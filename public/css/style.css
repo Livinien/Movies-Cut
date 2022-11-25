@@ -760,3 +760,102 @@ span {
         width: 60%;
     }
 }
+
+
+
+
+/* SECTION MANAGE MOVIES */
+
+.table-title {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+.table-full {
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.table-full th {
+    height: 50px;
+    background: rgb(255, 137, 116);
+    color: #fff;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+
+.table-full th:last-child
+.table-full td:last-child {
+    padding: 0px;
+    text-align: center;
+}
+
+
+.movie {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.movie a {
+    text-decoration: none;
+    color: #000;
+    padding-top: 20px;
+}
+
+
+.table-edit .edit-button-green {
+    border-style: none;
+    padding: 6px 12px;
+    margin: 0 0 0 25px;
+    background-color: rgb(89, 184, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.edit-button-green i {
+    padding-right: 10px;
+}
+
+.edit-button-green:hover {
+    background-color: rgb(71, 146, 0);
+}
+
+.table-delete .delete-button-red {
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    margin: 7px 0 0 85px;
+    background-color: rgb(255, 2, 2);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+
+.delete-button-red i {
+    padding-right: 10px;
+}
+
+.delete-button-red:hover {
+    background: #af0000;
+}
+
+
+
+
+
+
+
+

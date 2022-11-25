@@ -22,4 +22,12 @@ class Movie extends Model
                 ->orWhere('story', 'like','%' . request('search') . '%');
         }
     }
+
+
+
+    // RELATIONSHIP TO USER //
+    public function user() {
+        return $this->belongTo(User::class, 'user_id');
+    }
+
 }

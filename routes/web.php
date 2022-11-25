@@ -45,6 +45,10 @@ Route::put('/movie/{movie}', [MovieController::class, 'update'])->middleware('au
 Route::delete('/movie/{movie}', [MovieController::class, 'destroy'])->middleware('auth');
 
 
+// PAGE MANAGE MOVIES //
+Route::get('/movie/manage', [MovieController::class, 'manage'])->middleware('auth');;
+
+
 // SINGLE MOVIE //
 Route::get('/movie/{movie}', [MovieController::class, 'show']);
 

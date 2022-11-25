@@ -37,6 +37,9 @@
                     Welcome {{auth()->user()->firstname}}
                 </span>
                 <li>
+                    <a href="/movie/create"><i class="fa-solid fa-square-plus"></i>Add Movie</a>
+                </li>
+                <li>
                     <a href="/movie/manage"><i class="fa-solid fa-gear"></i>Manage Movies</a>
                 </li>
                 <li>
@@ -47,11 +50,9 @@
                         </button>
                     </form>
                 </li>
+
             @else
 
-                <li>
-                    <a href="/movie/create"><i class="fa-solid fa-square-plus"></i>Add Movie</a>
-                </li>
                 <li>
                     <a href="/signup"><i class="fa-sharp fa-solid fa-user-plus"></i>Sign Up</a>
                 </li>
