@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="/css/style.css">
-    
  
 
     <title>Movies Cut</title>
@@ -31,16 +30,18 @@
         <x-flash-message />
 
         <nav class="navigation">
-            <ul>
+            <ul class="nav-menu">
             @auth
                 <span class="authentification-name">
                     Welcome {{auth()->user()->firstname}}
                 </span>
-                <li>
+                <li class="nav-item">
                     <a href="/movie/create"><i class="fa-solid fa-square-plus"></i>Add Movie</a>
                 </li>
-                <li>
-                    <a href="/movie/manage"><i class="fa-solid fa-gear"></i>Manage Movies</a>
+                <li class="nav-item">
+                    <a href="/movie/manage">
+                        <i class="fa-solid fa-gear"></i>Manage Movies
+                    </a>
                 </li>
                 <li class="logout">
                     <form method="POST" action="/logout">
@@ -53,14 +54,20 @@
 
             @else
 
-                <li>
+                <li class="nav-item">
                     <a href="/signup"><i class="fa-sharp fa-solid fa-user-plus"></i>Sign Up</a>
                 </li>
-                <li>
+                <li class="nav-item">
                     <a href="/login"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
                 </li>
             @endauth
             </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span> 
+            </div>
         </nav>
     </div>
 
@@ -74,10 +81,7 @@
     </main>
 
 
-    <footer>
-        <p>Copyright &copy; 2022, All Rights reserved</p>
-    </footer>
-
+    <script src="/js/app.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     
 </body>

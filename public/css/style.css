@@ -20,6 +20,7 @@ body {
 .logo-movies-cut {
     width: 80px;
     margin-left: 10px;
+    z-index: 7;
 }
 
 
@@ -27,10 +28,6 @@ body {
     display: flex;
     list-style-type: none;
     padding-left: 30px;
-}
-
-li a:hover {
-    background-color: rgb(255, 59, 59);
 }
 
 
@@ -41,7 +38,12 @@ li a:hover {
     color: #fff;
     font-size: 15px;
     font-weight: 600;
+    padding: 15px;
     transition: 0.3s ease-in-out;
+}
+
+li a:hover {
+    background-color: rgb(255, 59, 59);
 }
 
 
@@ -59,6 +61,156 @@ li a:hover {
     padding-right: 10px;
 }
 
+
+@media(max-width: 900px) {
+
+    .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .logo-movies-cut {
+        margin-left: 20px;
+    }
+
+    .title-movie img {
+        padding-top: 120px;
+    }
+
+    .table-title, .back a, .edit {
+        margin-top: 140px;
+    }
+
+}
+
+
+
+/* MENU HAMBURGER / HEADER LINK AND LOGO - RESPONSIVE */
+
+.hamburger {
+    position: relative;
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+
+@media(max-width: 900px) {
+   
+    .hamburger {
+        display: block;
+        z-index: 6;
+        
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+        transition: 0.3s;
+    }
+
+    .navigation .authentification-name {
+        font-size: 30px;
+        margin: 310px 20px 0 0;
+        transition: 0.3s;
+    }
+
+    .header ul li a {
+        margin: 50px 20px 0 0;
+        font-size: 30px;
+    }
+
+    .logout {
+        margin: 40px auto;
+    }
+
+    .logout .logout-button {
+        padding: 30px;
+        margin-left: -30px;
+        font-size: 40px;
+    }
+
+    .nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 16px 40px 0 0;
+        padding: -12px;
+    }
+
+    .nav-item:nth-child(1) {
+        margin-top: 300px;
+    }
+
+    .nav-menu.active {
+        top: 0;
+    }
+}
+
+
+
+
+@media(max-width: 500px) {
+
+    .navigation .authentification-name {
+        font-size: 20px;
+        margin: 205px 20px 0 0;
+        transition: 0.3s;
+    }
+
+    .header ul li a {
+        margin: 50px 20px 0 0;
+        font-size: 20px;
+    }
+
+    .logout {
+        margin: 40px auto;
+    }
+
+    .logout .logout-button {
+        padding: 25px;
+        margin-left: -30px;
+        font-size: 30px;
+    }
+
+    .nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 16px 40px 0 0;
+    }
+
+}
 
 
 
@@ -132,6 +284,30 @@ input[type=text] {
 }
 
 
+@media(max-width: 500px) {
+    
+    .search {
+        margin-right: 50px;
+        padding-left: 50px;
+    }
+
+    .search .button-search {
+        padding: 10px 17px;
+    }
+}
+
+
+@media(max-width: 360px) {
+    
+    .search {
+        margin-right: 90px;
+        padding-left: 90px;
+    }
+
+    .search .button-search {
+        padding: 10px 10px;
+    }
+}
 
 
 /* CARDS MOVIES */
@@ -140,7 +316,7 @@ input[type=text] {
     display: inline-block;
     justify-content: center;
     align-items: center;
-    margin-left: 80px;
+    margin-left: 35px;
     
 }
 
@@ -168,6 +344,8 @@ input[type=text] {
 }
 
 .movie-title {
+    display: flex;
+    justify-content: center;
     font-size: 25px;
     font-weight: 600;
     margin: 20px auto;
@@ -185,9 +363,51 @@ input[type=text] {
     padding: 5px;
 }
 
-.movie-intro {
+.story {
+    display: flex;
+    justify-content: center;
     margin: 19px 0 15px;
 }
+
+
+
+
+/* READ MORE + */
+
+
+.content-story {
+    display: none;
+    transition: 0.5s linear;
+}
+
+.more-informations {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: tomato;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.more-informations:hover {
+    background-color: rgb(255, 113, 88);
+}    
+
+.readMore a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+
 
 
 /* FOOTER */
@@ -235,10 +455,14 @@ footer {
 
 /* PAGINATION */
 
-.paginate {
+/* We can't find ".pagination" in code because i used Bootstapp */
+.pagination {
     display: flex;
     justify-content: center;
+    z-index: 0;
 }
+
+
 
 
 
@@ -304,7 +528,7 @@ span {
 .imdb {
     display: flex;
     justify-content: center;
-    margin: 50px auto;
+    margin: 100px auto 0;
     text-decoration: none;
     background-color: red;
     color: #fff;
@@ -317,7 +541,7 @@ span {
 .trailer {
     display: flex;
     justify-content: center;
-    margin: 30px auto;
+    margin: 50px auto 150px;
     text-decoration: none;
     background-color: #000;
     color: #fff;
@@ -345,6 +569,42 @@ span {
 
 .trailer:hover {
     background-color: rgb(75, 75, 75);
+}
+
+
+@media(max-width: 900px) {
+
+     .story {
+        max-width: 700px;
+    }
+}
+
+@media(max-width: 770px) {
+
+     .story {
+        max-width: 500px;
+    }
+}
+
+@media(max-width: 580px) {
+
+     .story {
+        max-width: 400px;
+    }
+}
+
+@media(max-width: 465px) {
+
+     .story {
+        max-width: 300px;
+    }
+}
+
+@media(max-width: 365px) {
+
+     .story {
+        max-width: 250px;
+    }
 }
 
 
@@ -398,7 +658,7 @@ span {
 .edit .button-delete {
     border-style: none;
     padding: 6px 12px;
-    margin: 7px 0 0 0;
+    margin: 7px 20px 0 0;
     background-color: rgb(255, 2, 2);
     border-radius: 5px;
     color: #fff;
@@ -415,6 +675,43 @@ span {
     padding-right: 10px;
 }
 
+
+
+@media(max-width: 600px) {
+
+    .edit a {
+        padding: 6px 15px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .edit .button-delete {
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
+
+@media(max-width: 450px) {
+
+    .edit {
+        flex-direction: column;
+    }
+
+    .edit a {
+        margin-right: 10px;
+        padding: 6px 20px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .edit .button-delete {
+        display: flex;
+        align-items: center;
+        margin-right: -28px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
 
 
 
@@ -752,6 +1049,7 @@ span {
     align-items: center;
     color: #fff;
     font-weight: 600;
+    font-size: 20px;
     text-transform: uppercase;
 }
 
@@ -764,7 +1062,7 @@ span {
     display: flex;
     align-items: center;
     border-style: none;
-    height: 40px;
+    height: 60px;
     padding: 6px 12px;
     margin: -2px 0 0 0;
     background-color: rgb(255, 2, 2);
@@ -779,6 +1077,14 @@ span {
 .logout-button:hover {
     background: #ff6262;
 }
+
+@media(max-width: 900px) {
+
+    .logout-button {
+        margin: -4px 0 0 0;
+    }
+}
+
 
 
 
@@ -980,6 +1286,7 @@ span {
 
 
 
+/* MANAGE MOVIES - RESPONSIVE */
 
 @media(max-width: 800px) {
 
@@ -990,6 +1297,88 @@ span {
     .table-delete .delete-button-red {
         margin: 7px 0 0 39px;
     }
+}
+
+
+@media(max-width: 600px) {
+
+    .movie img {
+        width: 130px;
+    }
+
+    .movie a {
+        font-size: 15px;
+    }
+
+
+    .table-edit .edit-button-green {
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .table-delete .delete-button-red {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+}
+
+@media(max-width: 447px) {
+
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    .movie img {
+        width: 110px;
+    }
+
+    .movie a {
+        font-size: 10px;
+    }
+
+    .table-edit .edit-button-green {
+        padding: 13px 14px 13px 14px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .table-delete .delete-button-red {
+        margin-top: 9px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+}
+
+
+@media(max-width: 365px) {
+
+    .movie img {
+        width: 110px;
+    }
+
+    .movie a {
+        font-size: 10px;
+    }
+
+    .table-edit .edit-button-green {
+        display: flex;
+        align-items: center;
+        padding: 15px 14px 13px 14px;
+        font-size: 8px;
+        font-weight: bold;
+    }
+
+    .table-delete .delete-button-red {
+        display: flex;
+        align-items: center;
+        margin-top: 9px;
+        font-size: 8px;
+        font-weight: bold;
+    }
+
 }
 
 

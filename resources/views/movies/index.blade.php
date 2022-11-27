@@ -26,6 +26,11 @@
     <div class="paginate">
         {{$movies->links('pagination::bootstrap-4')}}
     </div>
+
+    <footer>
+        <p>Copyright &copy; 2022, All Rights reserved</p>
+    </footer>
+
     
 </x-layout>
 

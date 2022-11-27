@@ -12,16 +12,28 @@
                 <h2 class="movie-title">
                     <a href="/movie/{{$movie->id}}">{{$movie->title}}</a>
                 </h2>
+
                 <span class="features">
                     <a href="#">{{$movie->year}}</a>
                 </span>
+
                 <span class="features">
                     <a href="#">{{$movie->duration}}</a>
                 </span>
+
                 <span class="features">
                     <a href="#">{{$movie->studio}}</a>
                 </span>
-                <p class="movie-intro">{{$movie->story}}</p>
+
+                <div class="readMore">
+                    <div class="content-story">
+                        <p>{{$movie->story}}</p>
+                    </div>
+                    <a href="/movie/{{$movie->id}}" class="more-informations">More Informations</a>
+                </div>
+
+
+                </div>
             </div>
         </div>
     </div>
