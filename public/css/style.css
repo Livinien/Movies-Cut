@@ -312,19 +312,21 @@ input[type=text] {
 
 /* CARDS MOVIES */
 
+
 .block-cards-movies {
     display: inline-block;
     justify-content: center;
     align-items: center;
+    max-width: 500px;
     padding-left: 35px;
-    
 }
 
 .flex-cards-movies {
     display: flex;
     justify-content: center;
-    width: 140%;
+    width: 100%;
 }
+
 
 .movie-card {
     max-width: 470px;
